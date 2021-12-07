@@ -6,8 +6,10 @@ build:
       - pip install -r requirements.txt
 run:
   command: python app.py
+  network:
+    port: 8080
   env:
     - name: PORT
-      value: "8080"
+      value: 8080
     - name: NAME
       value: Foo
