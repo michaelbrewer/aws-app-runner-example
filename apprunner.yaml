@@ -5,4 +5,9 @@ build:
     build:
       - pip install -r requirements.txt
 run:
-  command: PORT=8080 NAME=demo python app.py
+  command: python app.py
+  env:
+    - name: PORT
+      value: "8080"
+    - name: NAME
+      value: Foo
