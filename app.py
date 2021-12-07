@@ -5,10 +5,8 @@ import os
 
 
 def hello_world(request):
-    name = os.environ.get("NAME")
-    if name == None or len(name) == 0:
-        name = "world"
-    message = f"Hello, {name}!!\n"
+    name = os.environ.get("NAME") or "world"
+    message = f"Hello, {name}!!!\n"
     return Response(message)
 
 
